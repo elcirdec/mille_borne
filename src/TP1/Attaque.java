@@ -7,6 +7,18 @@ public class Attaque extends Probleme {
 	}
 	@Override
 	public String toString() {
-		return "Attaque";
+		Type type=this.type;
+		String retour ="choix incorrect";
+		switch(type) {
+		case FEU:
+			retour = "feu rouge";
+		case ESSENCE:
+			retour = "Panne essence";
+		case CREVAISON:
+			retour = "crevaison";
+		case ACCIDENT:
+			retour = "accident";
+		}
+		return retour;
 	}
 }

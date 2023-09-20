@@ -7,7 +7,19 @@ public class Botte extends Probleme {
 	}
 	@Override
 	public String toString() {
-		return "Botte";
+		Type type=this.type;
+		String retour ="choix incorrect";
+		switch(type) {
+		case FEU:
+			retour = "vehicule prioritaire";
+		case ESSENCE:
+			retour = "citerne d'essence";
+		case CREVAISON:
+			retour = "increvable";
+		case ACCIDENT:
+			retour = "as du volant";
+		}
+		return retour;
 	}
 
 }

@@ -6,6 +6,18 @@ public class Parade extends Probleme{
 	}
 	@Override
 	public String toString() {
-		return "Parade";
+		Type type=this.type;
+		String retour ="choix incorrect";
+		switch(type) {
+		case FEU:
+			retour = "feu vert";
+		case ESSENCE:
+			retour = "essence";
+		case CREVAISON:
+			retour = "roue de secours";
+		case ACCIDENT:
+			retour = "reparation";
+		}
+		return retour;
 	}
 }
