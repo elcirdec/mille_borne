@@ -5,6 +5,7 @@ public class Attaque extends Probleme {
 	public Attaque(Type type, int nombre) {
 		super(type,nombre);
 	}
+	
 	@Override
 	public String toString() {
 		Type type=this.type;
