@@ -1,8 +1,11 @@
 package testsFonctionnels;
 
+import java.util.Iterator;
+
 import jeu.Sabot;
 import tp1.Attaque;
 import tp1.Botte;
+import tp1.Carte;
 import tp1.Parade;
 import tp1.Probleme;
 
@@ -15,7 +18,7 @@ public class essaie {
 		Botte asDuVolant= new Botte(Probleme.Type.ACCIDENT,1);
 		sabot.ajouterFamilleCarte(accident,reparation,asDuVolant);
 		
-		for(int i = 0 ; sabot.iterator().hasNext() ; i++) {
+		for(Iterator<Carte> it = sabot.iterator() ; it.hasNext() ;) {
 			sabot.piocher();
 			
 		}

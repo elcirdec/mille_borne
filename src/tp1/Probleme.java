@@ -6,5 +6,7 @@ public abstract class Probleme extends Carte {
 	
 	public Probleme(Type type,int nombre) {
 		super(nombre);
+		this.type=type;
+		
 	}
 }
