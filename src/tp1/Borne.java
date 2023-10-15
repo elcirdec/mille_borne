@@ -2,11 +2,20 @@ package tp1;
 
 public class Borne extends Carte {
 	private int km;
-	protected Borne(int km, int numero) {
+	public Borne(int km, int numero) {
 		super(numero);
+		this.km=km;
 	}
 	@Override
 	public String toString() {
 		return "Borne "+km;
+	}
+	
+	public boolean equals(Object obj) {
+		if(obj instanceof Borne){
+			Borne carte = (Borne) obj;
+			return km == carte.km;
+		}
+		return false;
 	}
 }

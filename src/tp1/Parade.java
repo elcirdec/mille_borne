@@ -20,4 +20,12 @@ public class Parade extends Probleme{
 		}
 		return retour;
 	}
+	
+	public boolean equals(Object obj) {
+		if(obj instanceof Parade){
+			Parade carte = (Parade) obj;
+			return type.equals(carte.type);
+		}
+		return false;
+	}
 }

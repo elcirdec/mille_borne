@@ -22,4 +22,12 @@ public class Attaque extends Probleme {
 		}
 		return retour;
 	}
+	
+	public boolean equals(Object obj) {
+		if(obj instanceof Attaque){
+			Attaque carte = (Attaque) obj;
+			return type.equals(carte.type);
+		}
+		return false;
+	}
 }

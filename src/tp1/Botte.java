@@ -21,5 +21,13 @@ public class Botte extends Probleme {
 		}
 		return retour;
 	}
+	
+	public boolean equals(Object obj) {
+		if(obj instanceof Botte){
+			Botte carte = (Botte) obj;
+			return type.equals(carte.type);
+		}
+		return false;
+	}
 
 }

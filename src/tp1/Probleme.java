@@ -9,4 +9,5 @@ public abstract class Probleme extends Carte {
 		this.type=type;
 		
 	}
+
 }

@@ -6,6 +6,7 @@ import java.util.NoSuchElementException;
 import javax.management.RuntimeErrorException;
 
 import tp1.Attaque;
+import tp1.Borne;
 import tp1.Botte;
 import tp1.Carte;
 import tp1.Parade;
@@ -122,5 +123,33 @@ public class Sabot implements Iterable{
 			System.out.println(sabot.piocher());
 
 		}
+		
+		Attaque accident1= new Attaque(Probleme.Type.ACCIDENT,3);
+		Parade reparation1= new Parade(Probleme.Type.ACCIDENT,3);
+		Botte asDuVolant1= new Botte(Probleme.Type.ACCIDENT,1);
+		Borne borne= new Borne(200, 3);
+		
+		Attaque accident2= new Attaque(Probleme.Type.ACCIDENT,1);
+		Parade reparation2= new Parade(Probleme.Type.ACCIDENT,2);
+		Botte asDuVolant2= new Botte(Probleme.Type.ACCIDENT,3);
+		Borne borne2= new Borne(200, 5);
+		
+		Attaque accident3= new Attaque(Probleme.Type.CREVAISON,1);
+		Parade reparation3= new Parade(Probleme.Type.ESSENCE,2);
+		Botte asDuVolant3= new Botte(Probleme.Type.FEU,3);
+		Borne borne3= new Borne(2010, 5);
+		
+		System.out.println(accident1.equals(accident2));
+		System.out.println(accident1.equals(accident3));
+		
+		System.out.println(reparation1.equals(reparation2));
+		System.out.println(reparation1.equals(reparation3));
+		
+		System.out.println(asDuVolant1.equals(asDuVolant2));
+		System.out.println(asDuVolant1.equals(asDuVolant3));
+		
+		System.out.println(borne.equals(borne2));
+		System.out.println(borne.equals(borne3));
+		
 	}
 }
