@@ -37,7 +37,7 @@ public class Sabot implements Iterable{
 				Carte carte = tabCarte[indiceIterateur];
 				indiceIterateur++;
 				nextEffectue = true;
-				System.out.println("jai mis nextEffectuer a " + nextEffectue);
+//				System.out.println("jai mis nextEffectuer a " + nextEffectue);
 				return carte;
 			} else {
 				throw new NoSuchElementException();
@@ -50,12 +50,16 @@ public class Sabot implements Iterable{
 		}
 
 		public void remove() { // suppression de l’élément que l’on vient de passer
-			System.out.println("nbCartes vu par remove = " + nbCartes);
+			//			System.out.println("nbCartes vu par remove = " + nbCartes);
 			//			System.out.println("nexeffectuer = "+ nextEffectue);
 			if (nbCartes < 1 || !nextEffectue) {
 				throw new IllegalStateException();
 			}
+			for (int i = indiceIterateur - 1; i < nbCartes - 1; i++) {
+				tabCarte[i] = tabCarte[i+1];
+			}
 			nextEffectue = false;
+//			System.out.println("jai mis nextEffectuer a " + nextEffectue);
 			indiceIterateur--; // indice du prochain élément à visiter (s’il existe)
 			nbCartes--;
 		}
@@ -72,7 +76,7 @@ public class Sabot implements Iterable{
 			tabCarte[nbCartes] = carte;
 			nbCartes++;
 			System.out.println("j'ai ajouter la carte "+carte);
-			System.out.println("le nombre de cartes passe a "+nbCartes);
+			//			System.out.println("le nombre de cartes passe a "+nbCartes);
 		}
 	}
 
@@ -107,7 +111,6 @@ public class Sabot implements Iterable{
 		return "Je pioche "+ carte1.toString();
 	}
 
-
 	public static void main(String[] args) {
 		Sabot sabot= new Sabot(7);
 		Attaque accident= new Attaque(Probleme.Type.ACCIDENT,3);
@@ -116,7 +119,7 @@ public class Sabot implements Iterable{
 		sabot.ajouterFamilleCarte(accident,reparation,asDuVolant);
 		System.out.println(sabot.nbCartes);
 		for(int i=0 ;i<sabot.nbCartes ;) {
-			sabot.piocher();
+			System.out.println(sabot.piocher());
 
 		}
 	}
