@@ -1,33 +1,33 @@
-package tp1;
+package cartes;
 
-public class Attaque extends Probleme {
+public class Botte extends Probleme {
 
-	public Attaque(Type type, int nombre) {
-		super(type,nombre);
+	public Botte(Type type, int nombre) {
+		super(type, nombre);
 	}
-	
 	@Override
 	public String toString() {
 		Type type=this.type;
 		String retour ="choix incorrect";
 		switch(type) {
 		case FEU:
-			retour = "feu rouge";
+			retour = "vehicule prioritaire";
 		case ESSENCE:
-			retour = "Panne essence";
+			retour = "citerne d'essence";
 		case CREVAISON:
-			retour = "crevaison";
+			retour = "increvable";
 		case ACCIDENT:
-			retour = "accident";
+			retour = "as du volant";
 		}
 		return retour;
 	}
 	
 	public boolean equals(Object obj) {
-		if(obj instanceof Attaque){
-			Attaque carte = (Attaque) obj;
+		if(obj instanceof Botte){
+			Botte carte = (Botte) obj;
 			return type.equals(carte.type);
 		}
 		return false;
 	}
+
 }

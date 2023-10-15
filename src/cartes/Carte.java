@@ -1,4 +1,4 @@
-package tp1;
+package cartes;
 
 public abstract class Carte {
 	protected int nombre;

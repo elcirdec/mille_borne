@@ -1,4 +1,4 @@
-package tp1;
+package cartes;
 
 public abstract class Probleme extends Carte {
 	public enum Type {FEU,ESSENCE,CREVAISON,ACCIDENT};

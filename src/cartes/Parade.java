@@ -1,4 +1,4 @@
-package tp1;
+package cartes;
 
 public class Parade extends Probleme{
 	public Parade(Type type,int nombre) {

@@ -1,4 +1,4 @@
-package tp1;
+package cartes;
 
 public abstract class Bataille extends Probleme{
 

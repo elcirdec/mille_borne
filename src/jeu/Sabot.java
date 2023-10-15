@@ -5,12 +5,12 @@ import java.util.NoSuchElementException;
 
 import javax.management.RuntimeErrorException;
 
-import tp1.Attaque;
-import tp1.Borne;
-import tp1.Botte;
-import tp1.Carte;
-import tp1.Parade;
-import tp1.Probleme;
+import cartes.Attaque;
+import cartes.Borne;
+import cartes.Botte;
+import cartes.Carte;
+import cartes.Parade;
+import cartes.Probleme;
 
 public class Sabot implements Iterable{
 	private Carte carte;

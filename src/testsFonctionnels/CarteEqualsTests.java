@@ -8,11 +8,11 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import tp1.Attaque;
-import tp1.Borne;
-import tp1.Botte;
-import tp1.Parade;
-import tp1.Probleme;
+import cartes.Attaque;
+import cartes.Borne;
+import cartes.Botte;
+import cartes.Parade;
+import cartes.Probleme;
 
 class CarteEqualsTests {
 

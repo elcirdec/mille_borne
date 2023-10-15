@@ -2,8 +2,8 @@ package testsFonctionnels;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import cartes.*;
 import jeu.Sabot;
-import tp1.*;
 
 class Test {
 
