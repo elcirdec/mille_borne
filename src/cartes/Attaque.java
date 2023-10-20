@@ -12,13 +12,13 @@ public class Attaque extends Probleme {
 		String retour ="choix incorrect";
 		switch(type) {
 		case FEU:
-			retour = "feu rouge";
+			return "feu rouge";
 		case ESSENCE:
-			retour = "Panne essence";
+			return "Panne essence";
 		case CREVAISON:
-			retour = "crevaison";
+			return "crevaison";
 		case ACCIDENT:
-			retour = "accident";
+			return "accident";
 		}
 		return retour;
 	}

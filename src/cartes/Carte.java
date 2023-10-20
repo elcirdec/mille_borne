@@ -11,7 +11,7 @@ public abstract class Carte {
 	public int getNombre() {
 		return nombre;
 	}
-
+	
 
 
 

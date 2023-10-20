@@ -10,13 +10,13 @@ public class Parade extends Probleme{
 		String retour ="choix incorrect";
 		switch(type) {
 		case FEU:
-			retour = "feu vert";
+			return "feu vert";
 		case ESSENCE:
-			retour = "essence";
+			return "essence";
 		case CREVAISON:
-			retour = "roue de secours";
+			return "roue de secours";
 		case ACCIDENT:
-			retour = "reparation";
+			return "reparation";
 		}
 		return retour;
 	}
