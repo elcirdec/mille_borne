@@ -16,16 +16,17 @@ public class Utils {
 		int ran=r.nextInt(list.size());
 		T carte=list.get(ran);
 		list.remove(carte);
-		
+
 		return carte;
 	}
-	
+
 	public <T> List<T> melanger(List<T> list){
 		List<T> list2=  new ArrayList<T>();
 		for (Iterator iterator = list.iterator(); iterator.hasNext();) {
 			T t=extraire(list);
 			list2.add(t);
 			list.remove(t);
+			iterator.next();
 		}
 		return list2;
 	}
@@ -42,11 +43,26 @@ public class Utils {
 			}
 		}
 		return true;
-		
+
 	}
-	
-	
-	
-	
-	
+
+	public <T> List<T> rassembler(List<T> list){
+		List<T> list2=  new ArrayList<T>();
+		for(int i=0; i<list.size(); i++) {
+			T t = list.get(i);
+			int freql1=Collections.frequency(list, list.get(i));
+			for (Iterator iterator = list.iterator(); iterator.hasNext();) {
+				T l=(T) iterator.next();
+				if(l==t) {
+					list2.add(t);
+					list.remove(t);
+				}
+
+			}
+		}
+		return list2;
+	}
+
+
+
 }
